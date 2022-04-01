@@ -1,0 +1,17 @@
+.container{
+
+    text-align: center;
+    margin: 20%;
+}
+b{
+    margin: 20% 20%;
+}
+#resultado{
+
+    text-align: center;
+}
+button{
+width: 100%;
+background: rgb(58, 58, 160);
+border-radius: 10px;
+}

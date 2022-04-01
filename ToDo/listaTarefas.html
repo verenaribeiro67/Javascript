@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+   <!--ícones da CSS.gg-->
+    <link href='https://css.gg/trash.css' rel='stylesheet'>
+    <link href='https://css.gg/remove-r.css' rel='stylesheet'>
+   
+    <title>Lista de Tarefas Verena</title>
+</head>
+
+<body>
+
+    <h2>Lista de tarefas</h2>
+
+    <br/><br/>
+    
+    <input id="desc-nova-tarefa">
+    <button id="add-tarefa"><i class="gg-play-list-add"></i></button>
+    <button id="remover-tarefa"><i class="gg-remove-r"></i></i></button>
+     <br/><br/><br/><br/>
+    <div id="lista-tarefas"></div>
+
+
+
+
+
+
+
+
+
+    <!--Script da Aplicação-->
+    <script>
+        let tarefas = [];
+let inputDescNovaTarefa = document.getElementById('desc-nova-tarefa');
+let botaoAddTarefa = document.getElementById('add-tarefa');
+let divListaTarefas = document.getElementById('lista-tarefas');
+let botaoRemoverTarefa = document.getElementById('remover-tarefa');
+
+function renderizarListaTarefas() {
+    let tarefasString = '';
+    for (let i = 0; i < tarefas.length; i += 1) {
+        tarefasString += (i + 1) + '. ' + tarefas[i] + '<br/>';
+    }
+    divListaTarefas.innerHTML = tarefasString;
+}
+
+function addTarefa() {
+    let descNovaTarefa = inputDescNovaTarefa.value;
+    tarefas.push(descNovaTarefa);
+    
+    renderizarListaTarefas();
+
+    inputDescNovaTarefa.value = '';
+}
+
+function removerTarefa() {
+    let descNovaTarefa = inputDescNovaTarefa.value;
+    tarefas.splice(0,1);
+    renderizarListaTarefas();
+    inputDescNovaTarefa.value = '';
+}
+
+botaoAddTarefa.addEventListener('click', addTarefa);
+inputDescNovaTarefa.addEventListener('keypress', function(event) {
+    if (event.key === "Enter") {
+        addTarefa();
+    }
+});
+    </script>
+        <!--Script da Aplicação-->
+
+    </body>
+</html>

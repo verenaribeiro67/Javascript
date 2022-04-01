@@ -1,0 +1,58 @@
+body{
+    background: rgb(31, 94, 189);
+}
+
+h2{
+    font-size: 32px;
+    text-align: center;
+    color: #fff;
+}
+
+#campoInfo{
+    margin: 0% 30% 0% 20%;
+}
+
+
+#tarefasExibidas{
+    margin: 4% 0% 0% 18%;
+    color: #fff;
+    font-size: 20px;
+}
+
+#add-tarefa{
+    background: rgb(32, 143, 82);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+#add-tarefa:hover{
+    transform: scale(1.1); 
+    transition: transform .2s; /* Animation */
+}
+
+#btRemover{
+    background: rgb(167, 42, 38);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    margin-left: 1%;
+    margin-right: 1%;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+#btRemover:hover{
+    transform: scale(1.1); 
+    transition: transform .2s; /* Animation */
+}
+
+
+#desc-nova-tarefa{
+    padding: 10px;
+    width: 300px;
+    border: none;
+}
+
